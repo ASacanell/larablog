@@ -20,6 +20,7 @@
         ]) !!};
     </script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://use.fontawesome.com/f24bdb3ccf.js"></script>
 </head>
 <body>
     <div id="app">

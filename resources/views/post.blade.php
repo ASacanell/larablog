@@ -3,6 +3,6 @@
 @section('content')
     <div class="content">
         <h1 style="color: deepskyblue">{{$post->title}}</h1>
-        <p style="font-weight: bold">{{ $post->content }}</p>
+        <div style="font-weight: bold">{!! html_entity_decode($post->content) !!}</div>
     </div>
 @endsection

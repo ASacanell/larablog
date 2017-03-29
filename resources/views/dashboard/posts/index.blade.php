@@ -2,7 +2,6 @@
 
 @section('content')
 
-    <script src="https://use.fontawesome.com/f24bdb3ccf.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
