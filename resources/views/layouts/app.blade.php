@@ -21,6 +21,12 @@
     </script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://use.fontawesome.com/f24bdb3ccf.js"></script>
+    <script src='//cloud.tinymce.com/stable/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+            selector: '#bodyeditor'
+        });
+    </script>
 </head>
 <body>
     <div id="app">
