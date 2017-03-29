@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -10,7 +9,7 @@
                     @foreach ($posts as $post)
                         <div class="panel-body">
                             <a href="{{ url('/dashboard/post/edit/' . $post->id)}}"><span style="color: black">{{ $post->title }}</span></a>
-                            <a href="{{ url('/dashboard/post/delete/' . $post->id)}}"><i class="fa fa-times" style="color: red; float: right"; aria-hidden="true"></i></a>
+                            <a href="{{ url('/dashboard/post/delete/' . $post->id)}}"><i class="fa fa-times" style="color: red; float: right;" aria-hidden="true"></i></a>
                         </div>
                     @endforeach
                     <div style="text-align: center">{{ $posts->links() }}</div>
