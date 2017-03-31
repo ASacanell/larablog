@@ -1,5 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
-@section('content')
+@section('body')
     <dashboardmenu></dashboardmenu>
 @endsection
+
+

@@ -15,21 +15,6 @@ require('./bootstrap');
 
 Vue.component('dashboardmenu', require('./components/DashboardMenu.vue'));
 
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles', 'http://localhost:8000/particles.json', function() {});
-
-var sidebar = new Vue({
-    el: '#sidebar',
-    data: {
-        title: 'Laravel + Vue'
-    },
-    computed:  {
-        titleUppercase: function() {
-            return this.title.toUpperCase();
-        }
-    }
-});
-
 var app = new Vue({
-    el: '#app'
+    el: '#vue-app'
 });

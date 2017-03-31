@@ -1,6 +1,6 @@
-@extends("layouts.basic")
+@extends('layouts.blog')
 
-@section("content")
+@section('body')
     <div class="content">
         @foreach ($posts as $post)
             <a href="{{ url('/post/' . $post->id)}}"><h2>{{ $post->title }}</h2></a>

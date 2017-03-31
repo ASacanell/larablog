@@ -1,4 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
+
+@section('scripts')
+    <script src="{{ asset('js/simplemde.min.js') }}"></script>
+    <script>
+        new SimpleMDE({ element: document.getElementById("bodyEditor") });
+    </script>
+@endsection
 
 @section('content')
     <div id="content" style="padding-left: 5%; padding-right: 5%;">
@@ -13,7 +20,7 @@
 
             <div class="form-group">
                 {!! Form::label('content', "Content:") !!}
-                {!! Form::textarea('content', null, ['class' => 'form-control', 'id' => 'bodyeditor']) !!}
+                {!! Form::textarea('content', null, ['class' => 'form-control', "id" => "bodyEditor"]) !!}
             </div>
 
             <div class="form-group">
