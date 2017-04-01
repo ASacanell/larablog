@@ -1,8 +1,12 @@
-@extends('layouts.blog')
+@extends('blog.layout')
 
-@section('body')
+@section('content')
     <div class="content">
-        <h1 style="color: deepskyblue">{{$post->title}}</h1>
-        <div style="font-weight: bold">{!! html_entity_decode($post->content) !!}</div>
+        <div class="posts">
+            <div class="post">
+                <div class="post-title">{{$post->title}}</div>
+                <div>{!! html_entity_decode($post->content) !!}</div>
+            </div>
+        </div>
     </div>
 @endsection

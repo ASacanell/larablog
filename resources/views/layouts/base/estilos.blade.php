@@ -10,32 +10,22 @@
         overflow:hidden;
         text-decoration: none;
     }
-    ::selection {
-        background: dodgerblue; /* WebKit/Blink Browsers */
-    }
-    p {
-        background-color: #fff;
-        color: #101010;
-        font-weight: 200;
-        margin: 0;
-    }
-    a {
-        color: deepskyblue;
-        text-decoration: none;
+
+    ::-moz-selection { background-color : #D3AC2B}
+    ::selection { background-color : #D3AC2B; }
+
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
     }
 
     .full-height {
         height: 100vh;
-    }
-
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .position-ref {
-        position: relative;
     }
 
     .top-right {
@@ -45,16 +35,8 @@
         z-index: 10;
     }
 
-    .content {
-        text-align: justify;
-    }
-
-    .title {
-        font-size: 84px;
-    }
-
     .links > a {
-        color: #636b6f;
+        color: #333D51;
         padding: 0 25px;
         font-size: 12px;
         font-weight: 600;
@@ -63,7 +45,70 @@
         text-transform: uppercase;
     }
 
-    .m-b-md {
-        margin-bottom: 30px;
+    .flex {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        padding-top: 100px;
+        width: 300px;
+        height: 100vh;
+        background-color: #333D51 ;
+        text-align: center;
+        font-family: Ailerons, sans-serif;
+    }
+
+    .img-circle {
+        border-radius: 50%;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .blog-title {
+        font-size: 40px;
+        font-weight: bold;
+        color: #F4F3EA;
+    }
+
+    .blog-title:hover {
+        color: #D3AC2B;
+        text-decoration: none;
+    }
+
+    .content {
+        height: 94vh;
+        margin-top: 6vh;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .posts {
+        height: 88vh;
+        flex: 1;
+        padding: 0 10% 0 10%;
+        font-size: 18px;
+        text-align: justify;
+        font-family: Kayak, sans-serif;
+        overflow:auto;
+    }
+
+    .post {
+        margin-bottom: 2vh;
+    }
+
+    .post-title {
+        font-size: 36px;
+        color: #D3AC2B;
+        font-family: Kayak, sans-serif;
+    }
+    .post-title::-moz-selection { background-color : #333D51}
+    .post-title::selection { background-color : #333D51; }
+
+    .post-pagination {
+        text-align: center;
+        height: 6vh;
     }
 </style>

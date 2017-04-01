@@ -32,7 +32,9 @@ class PostController extends Controller
         $input = Request::all();
         $post = Post::create($input);
 
-        return view('blog.post', ["post" => $post]);
+        return redirect()->action(
+            'HomeController@post', ['post' => $post]
+        );
     }
 
     /**
@@ -52,8 +54,9 @@ class PostController extends Controller
 //        TODO update updated_at time
 
         if ($post->save()) {
-            $post->content = $this->transformMarkdownToHtml($post->content);
-            return view('blog.post', ["post" => $post]);
+            return redirect()->action(
+                'HomeController@post', ['post' => $post]
+            );
         } else {
             return new JsonResponse("Failed to save the article in database", 500);
         }
@@ -71,10 +74,5 @@ class PostController extends Controller
         return redirect()->action(
             'DashboardController@posts'
         );
-    }
-
-    private function transformMarkdownToHtml($markdown) {
-        $converter = new CommonMarkConverter();
-        return $converter->convertToHtml($markdown);
     }
 }
