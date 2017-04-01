@@ -16,12 +16,17 @@
                         {{ csrf_field() }}
                     </form>
                 @else
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
+                    <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    <a href="#" data-toggle="modal" data-target="#registerModal">Register</a>
                 @endif
             </div>
         @endif
     </div>
+
+    @include('auth.login')
+    @include('auth.register')
+    @include('auth.passwords.reset')
+
 @endsection
 
 @section('body')

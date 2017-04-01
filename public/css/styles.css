@@ -131,3 +131,34 @@ html, body {
     text-align: center;
     height: 6vh;
 }
+
+.custom-modal-content {
+    background-color: #333D51;
+    color: #F4F3EA;
+}
+
+.custom-modal-title {
+    font-family: Ailerons, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #D3AC2B;
+}
+
+.custom-modal-close {
+    color: #D3AC2B;
+    cursor: pointer;
+    float: right;
+}
+
+.custom-modal-submit {
+    background-color: #D3AC2B;
+    font-weight: bold;
+    color: #333D51
+}
+
+.custom-modal-forgot {
+    color: #70c6d3;
+}
+.custom-modal-forgot:hover {
+    color: #D3AC2B;
+}
