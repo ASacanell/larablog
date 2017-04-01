@@ -3,7 +3,7 @@
     <a class="blog-title" href="{{ url('/') }}">ALEJANDRO SACANELL</a>
     <div>
         <a href="https://twitter.com/asacanelln"><i class="fa fa-twitter-square fa-3x sidebar-social" aria-hidden="true"></i></a>
-        <a href="https://es.linkedin.com/in/alejandrosacanell"><i class="fa fa-linkedin-square fa-3x sidebar-social" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/alejandrosacanell"><i class="fa fa-linkedin-square fa-3x sidebar-social" aria-hidden="true"></i></a>
         <a href="https://github.com/ASacanell"><i class="fa fa-github-square fa-3x sidebar-social" aria-hidden="true"></i></a>
     </div>
 </div>
