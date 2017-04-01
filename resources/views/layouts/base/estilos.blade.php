@@ -45,10 +45,17 @@
         text-transform: uppercase;
     }
 
-    .flex {
+    .flex-blog {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+    }
+
+    .flex-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .sidebar {
@@ -77,6 +84,18 @@
         text-decoration: none;
     }
 
+    .sidebar-social {
+        margin-top: 30vh;
+        color: #D3AC2B;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    .sidebar-social:hover {
+        opacity: 1;
+        position: relative;
+        top: -5px;
+    }
+
     .content {
         height: 94vh;
         margin-top: 6vh;
@@ -103,6 +122,9 @@
         font-size: 36px;
         color: #D3AC2B;
         font-family: Kayak, sans-serif;
+    }
+    .post-title:hover {
+        text-decoration: none;
     }
     .post-title::-moz-selection { background-color : #333D51}
     .post-title::selection { background-color : #333D51; }
