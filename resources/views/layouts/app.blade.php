@@ -11,7 +11,6 @@
     <title>{{ config('app.name', 'Blog') }}</title>
     @include('layouts.base.scripts')
     @include('layouts.base.stylesheets')
-    @include('layouts.base.estilos')
 </head>
 <body>
     <div id="vue-app">
