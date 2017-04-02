@@ -24,7 +24,19 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        return redirect()->action(
+            'DashboardController@statistics'
+        );
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function statistics()
+    {
+        return view('dashboard.statistics');
     }
 
     /**

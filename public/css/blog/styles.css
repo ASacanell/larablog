@@ -9,65 +9,6 @@ html, body {
     text-decoration: none;
 }
 
-::-moz-selection { background-color : #D3AC2B}
-::selection { background-color : #D3AC2B; }
-
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                              supported by Chrome and Opera */
-}
-
-.full-height {
-    height: 100vh;
-}
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
-    z-index: 10;
-}
-
-.links > a {
-    color: #333D51;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.links > a:hover {
-    color: #D3AC2B;
-}
-
-.flex-blog {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-.flex-sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar {
-    padding-top: 100px;
-    width: 300px;
-    height: 100vh;
-    background-color: #333D51 ;
-    text-align: center;
-    font-family: Ailerons, sans-serif;
-}
-
 .img-circle {
     border-radius: 50%;
     width: 200px;
@@ -75,7 +16,7 @@ html, body {
 }
 
 .blog-title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #F4F3EA;
 }
@@ -97,19 +38,11 @@ html, body {
     top: -5px;
 }
 
-.content {
-    height: 94vh;
-    margin-top: 6vh;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
 .posts {
     height: 88vh;
     flex: 1;
     padding: 0 10% 0 10%;
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
     font-family: Kayak, sans-serif;
     overflow:auto;
@@ -120,7 +53,7 @@ html, body {
 }
 
 .post-title {
-    font-size: 36px;
+    font-size: 44px;
     color: #D3AC2B;
     font-family: Kayak, sans-serif;
 }
@@ -142,7 +75,7 @@ html, body {
 }
 
 .custom-modal-title {
-    font-family: Ailerons, sans-serif;
+    font-family: Kayak, sans-serif;
     font-size: 30px;
     text-align: center;
     color: #D3AC2B;

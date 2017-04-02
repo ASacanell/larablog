@@ -1,0 +1,79 @@
+.flex-blog {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+::-moz-selection { background-color : #D3AC2B;}
+::selection { background-color : #D3AC2B; }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome and Opera */
+}
+
+.flex-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links > a {
+    color: #333D51;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.links > a:hover {
+    color: #D3AC2B;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    z-index: 10;
+}
+
+.sidebar {
+    padding-top: 100px;
+    width: 300px;
+    height: 100vh;
+    background-color: #333D51;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content {
+    height: 94vh;
+    margin-top: 6vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-hr {
+    margin-top: 0;
+    border-top: 3px double #8c8b8b;
+}

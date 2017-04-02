@@ -19,6 +19,7 @@ Route::get('/post/{post_id}', 'HomeController@post');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/dashboard/posts', 'DashboardController@posts');
 Route::get('/dashboard/users', 'DashboardController@users');
+Route::get('/dashboard/statistics', 'DashboardController@statistics');
 
 Route::match(['get', 'post'], '/dashboard/post/create', 'PostController@create');
 Route::match(['get', 'put'], '/dashboard/post/edit/{post_id}', 'PostController@edit');

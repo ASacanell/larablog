@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('dashboard.layout')
 
 @section('scripts')
     <script src="{{ asset('js/simplemde.min.js') }}"></script>
@@ -8,10 +8,11 @@
 @endsection
 
 @section('content')
-    <div id="content" style="padding-left: 5%; padding-right: 5%;">
-        <h1>Edit the article</h1>
-        <hr>
-        {!! Form::open(['url' => '/dashboard/post/edit/' . $post->id, 'method' => 'PUT']) !!}
+    <div class="content">
+        <div class="inner-content">
+            <h1>Edit the article</h1>
+            <hr>
+            {!! Form::open(['url' => '/dashboard/post/edit/' . $post->id, 'method' => 'PUT']) !!}
 
             <div class="form-group">
                 {!! Form::label('title', "Title:") !!}
@@ -27,6 +28,8 @@
                 {!! Form::submit('Edit post', ['class' => 'btn btn-primary form-control']) !!}
             </div>
 
-        {!! Form::close() !!}
+            {!! Form::close() !!}
+        </div>
     </div>
 @endsection
+

@@ -1,19 +1,24 @@
-@extends('layouts.dashboard')
+@extends('dashboard.layout')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading" style="text-align: center">Dashboard</div>
+    <!-- Modal content-->
+    <div class="content">
+        <div class="inner-content">
+            <div class="modal-content custom-modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title custom-modal-title">Users</h4>
+                </div>
+                <div class="modal-body">
                     @foreach ($users as $user)
                         <div class="panel-body">
-                            <span style="color: black">{{ $user->name }}</span>
+                            <span class="custom-post-title">{{ $user->name }}</span>
                         </div>
+                        <hr class="modal-hr">
                     @endforeach
                     <div style="text-align: center">{{ $users->links() }}</div>
                 </div>
             </div>
         </div>
     </div>
+
 @endsection

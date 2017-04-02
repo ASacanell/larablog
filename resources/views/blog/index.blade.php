@@ -5,7 +5,8 @@
         <div class="posts">
         @foreach ($posts as $post)
             <div class="post">
-                <a class="post-title" href="{{ url('/post/' . $post->id)}}">{{ $post->title }}</a>
+                <a class="post-title fancy" href="{{ url('/post/' . $post->id)}}">{{ $post->title }}</a>
+                <hr class="post-hr">
                 <div>{!! html_entity_decode($post->content) !!}</div>
             </div>
         @endforeach
