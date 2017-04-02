@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('styles')
+    <link href="{{ asset('css/dashboard/styles.css') }}" rel="stylesheet">
+@endsection
+
 @section('header')
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">

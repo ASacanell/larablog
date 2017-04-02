@@ -42,6 +42,9 @@ html, body {
     text-decoration: none;
     text-transform: uppercase;
 }
+.links > a:hover {
+    color: #D3AC2B;
+}
 
 .flex-blog {
     display: flex;
@@ -123,6 +126,7 @@ html, body {
 }
 .post-title:hover {
     text-decoration: none;
+    color: #333D51;
 }
 .post-title::-moz-selection { background-color : #333D51}
 .post-title::selection { background-color : #333D51; }
@@ -145,7 +149,7 @@ html, body {
 }
 
 .custom-modal-close {
-    color: #D3AC2B;
+    color: #F4F3EA;
     cursor: pointer;
     float: right;
 }

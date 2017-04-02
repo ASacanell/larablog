@@ -22,7 +22,7 @@
 
                 <div class="form-group">
                     {!! Form::label('remember', "Remember Me:") !!}
-                    {!! Form::checkbox('remember', true, ['class' => 'form-control']) !!}
+                    {!! Form::checkbox('remember', 'remember', true) !!}
                 </div>
 
                 <div class="form-group">

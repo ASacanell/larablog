@@ -1,7 +1,6 @@
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/simplemde.min.css') }}" rel="stylesheet">
-<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 <style>
     @font-face{
         font-family: "Ailerons";

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('styles')
+    <link href="{{ asset('css/blog/styles.css') }}" rel="stylesheet">
+@endsection
+
 @section('header')
     <div class="header">
         @if (Route::has('login'))
@@ -25,7 +29,7 @@
 
     @include('auth.login')
     @include('auth.register')
-    @include('auth.passwords.reset')
+    @include('auth.passwords.email')
 
 @endsection
 
