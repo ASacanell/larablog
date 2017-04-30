@@ -2,19 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Post as Post;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Repositories\Contracts\PostRepositoryInterface;
+use App\Repositories\Contracts\UserRepositoryInterface;
+use App\Repositories\PostRepository;
+use App\Repositories\UserRepository;
 
 class DashboardController extends Controller
 {
+    private $postRepository;
+
+    private $userRepository;
+
     /**
      * Create a new controller instance.
-     *
+     * @param PostRepositoryInterface $postRepository
+     * @param UserRepositoryInterface $userRepository
      */
-    public function __construct()
+    public function __construct(PostRepositoryInterface $postRepository, UserRepositoryInterface $userRepository)
     {
         $this->middleware('auth');
+        $this->postRepository = $postRepository;
+        $this->userRepository = $userRepository;
     }
 
     /**
@@ -43,11 +51,11 @@ class DashboardController extends Controller
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
- */
+     */
     public function posts()
     {
-        $posts = DB::table('posts')->orderBy('created_at', 'desc')->simplePaginate(5);
-        return view('dashboard.posts.index', ["posts" => $posts]);
+        $posts = $this->postRepository->findAllPaginated(5);
+        return view('dashboard.posts.index', ['posts' => $posts]);
     }
 
     /**
@@ -57,7 +65,7 @@ class DashboardController extends Controller
      */
     public function users()
     {
-        $users = DB::table('users')->orderBy('created_at', 'desc')->simplePaginate(5);
-        return view('dashboard.users.index', ["users" => $users]);
+        $users = $this->userRepository->findAllPaginated(5);
+        return view('dashboard.users.index', ['users' => $users]);
     }
 }

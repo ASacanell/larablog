@@ -16,4 +16,9 @@ class UserRepository implements UserRepositoryInterface
     {
         return User::find($id);
     }
+
+    public function findAllPaginated($amount)
+    {
+        return User::orderBy('created_at', 'desc')->simplePaginate($amount);
+    }
 }

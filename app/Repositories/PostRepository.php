@@ -16,4 +16,9 @@ class PostRepository implements PostRepositoryInterface
     {
         return Post::find($id);
     }
+
+    public function findAllPaginated($amount)
+    {
+        return Post::orderBy('created_at', 'desc')->simplePaginate($amount);
+    }
 }
