@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Repositories\PostRepository;
 use Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use League\CommonMark\CommonMarkConverter;
@@ -25,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        if (Request::method() == "GET") {
+        if (Request::method() === "GET") {
             return view('dashboard.posts.create');
         }
 
@@ -45,21 +46,24 @@ class PostController extends Controller
      */
     public function edit($post_id)
     {
-        $post = Post::find($post_id);
-        if (Request::method() == "GET") {
+//        $post = Post::find($post_id);
+        $asdf = new PostRepository();
+        $post = $asdf->findById($post_id);
+
+        if (Request::method() === "GET") {
             return view('dashboard.posts.edit', ["post" => $post]);
         }
 
         $post->fill(Request::all());
-//        TODO update updated_at time
+        $post->updated_at = new \DateTime('now');
 
         if ($post->save()) {
             return redirect()->action(
                 'HomeController@post', ['post' => $post]
             );
-        } else {
-            return new JsonResponse("Failed to save the article in database", 500);
         }
+
+        return new JsonResponse("Failed to save the article in database", 500);
     }
 
     /**
